@@ -7,7 +7,7 @@
             return json_encode(array('rusult' => '1', 'data' => '伺服器連接失敗'));
         }
 
-        $selected = mysqli_select_db($con, "chatbot") ;
+        $selected = mysqli_select_db($con, "heroku_4b25007c650d0dd") ;
         //mysql_select_db("project", $con);
 
         $sql="UPDATE post SET likes='$_POST[likes]'
