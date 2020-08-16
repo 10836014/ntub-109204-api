@@ -12,9 +12,9 @@
 
      $selected = mysqli_select_db($con, "heroku_4b25007c650d0dd") ;
 
-     $sql="INSERT INTO user (userID, userName, gender, birthday, email)
+     $sql="INSERT INTO user (userID, userName, email)
              VALUES 
-         ('$_POST[userID]','$_POST[userName]', '$_POST[gender]', '$_POST[birthday]', '$_POST[email]')";
+         ('$_POST[userID]','$_POST[userName]', '$_POST[email]')";
 
      if (!mysqli_query($con,$sql))
      {
