@@ -99,8 +99,8 @@ INSERT INTO `post` (`userID`, `postID`, `title`, `content`, `created_at`, `updat
 CREATE TABLE `user` (
   `userID` varchar(50) NOT NULL,
   `userName` varchar(50) NOT NULL,
-  `gender` varchar(10) NOT NULL,
-  `birthday` date NOT NULL,
+  `gender` varchar(10)  NULL,
+  `birthday` date  NULL,
   `email` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
