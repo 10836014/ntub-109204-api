@@ -1,6 +1,6 @@
 <?php
      
-        $con = mysqli_connect("localhost","root","mysqlpassword");
+        $con = mysqli_connect("us-cdbr-east-02.cleardb.com","bbb9298efa9b93","5f62769a");
 
         if (!$con){
             die('Could not connect: ' . mysql_error());
