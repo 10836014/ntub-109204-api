@@ -1,7 +1,10 @@
 <?php
-     
+     header("Content-Type: application/json; charset=UTF-8");
      $con = mysqli_connect("us-cdbr-east-02.cleardb.com","bbb9298efa9b93","5f62769a");
 
+
+     mysqli_query("SET character_set_results = 'utf8', character_set_client = 'utf8', character_set_connection = 'utf8', character_set_database = 'utf8', character_set_server = 'utf8'", $con);
+     
      /*if ($con){
         echo "result:1"; 
      }*/
