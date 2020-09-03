@@ -23,7 +23,7 @@
      if (!mysqli_query($con,$sql))
      {
      //die 'Error: ' . mysqli_error($con);
-     echo json_encode(array('rusult' => '1', 'data' => '添加失敗', 'error' => mysqli_error($con)));
+     echo json_encode(array('rusult' => '1', 'data' => '添加失敗', 'error' => mysqli_error($con), 'data' => $sql));
      echo ('Error: ' . mysqli_error($con));
      }else{
      echo json_encode(array('rusult' => '0', 'data' => '添加成功'));
