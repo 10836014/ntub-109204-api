@@ -12,9 +12,15 @@
 
      $selected = mysqli_select_db($con, "heroku_4b25007c650d0dd") ;
 
-     $sql="INSERT INTO chatroom (userID, chatRoomID, role, roleName, categoryID, habbitName, habbitContent, habbitStatus, remindTime, completion, rolerPhoto)
-             VALUES 
-         ('$_POST[userID]','$_POST[chatRoomID]', '$_POST[role]', '$_POST[roleName]', '$_POST[categoryID]', '$_POST[habbitName]','$_POST[habbitContent]','養成中', '$_POST[remindTime]', '$_POST[completion]', '$_POST[rolerPhoto]')";
+     $sql="INSERT INTO chatroom (userId, nickName, roleId,
+                                roleName, rolePhoto, habbitName,
+                                habbitId, signedTime, orginalIntention, 
+                                goodnees, badnees,compeltion)
+        VALUES 
+            ('$_POST[userID]','$_POST[nickName]', '$_POST[roleId]', 
+            '$_POST[roleName]', '$_POST[rolePhoto]', '$_POST[habbitName]',
+            '$_POST[habbitId]', '$_POST[signedTime]', '$_POST[orginalIntention]',
+             '$_POST[goodnees]','$_POST[badnees]', 0)";
 
      if (!mysqli_query($con,$sql))
      {
