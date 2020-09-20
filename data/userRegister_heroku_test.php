@@ -1,6 +1,16 @@
 <?php
     // header寫法無效
      header("Content-Type: application/json; charset=UTF-8");
+    <head>
+
+    <meta charset="utf-8">
+
+    </head>
+
+    @font-face {
+        font-family: 'OpenSans';
+        src: url(data:font/truetype;charset=utf-8;base64,AAEAAAATAQA...
+    }
      $con = mysqli_connect("us-cdbr-east-02.cleardb.com","bbb9298efa9b93","5f62769a");
 
     // mysqli_query寫法無效
@@ -23,7 +33,7 @@
      if (!mysqli_query($con,$sql))
      {
      //die 'Error: ' . mysqli_error($con);
-     echo json_encode(array('rusult' => '1', 'data' => '添加失敗', 'error' => mysqli_error($con)));
+     echo json_encode(array('rusult' => '1', 'data' => '添加失敗', 'error' => mysqli_error($con), 'data' => $sql));
      echo ('Error: ' . mysqli_error($con));
      }else{
      echo json_encode(array('rusult' => '0', 'data' => '添加成功'));
